@@ -1,0 +1,112 @@
+/*
+Colors used:
+Primary Color (Purple): #7051ef;
+Secondary Color (Dark Purple): #3a395e;
+*/
+body {
+  background-color: ffffff;
+  font-family: 'Rubik', sans-serif;
+  font-size: 16px; /* Sets the font size to 16px */
+  font-weight: 300; /* Sets the font weight to 300 */
+  line-height: 1.6; /* Sets the line-height to 1.6 * the font-size */
+  color: #3a395e;
+}
+
+h1, h2, h3, h4 {
+  line-height: 1.4;
+}
+h1 {
+  font-size: 2.75em;
+  font-weight: 700;
+}
+
+h2 {
+  font-size: 2.25em;
+  font-weight: 700;
+}
+
+h3 {
+  font-size: 1.75em;
+  font-weight: 400;
+}
+h4 {
+  font-size: 1.35em;
+  font-weight: 400;
+}
+
+code {
+	background-color: black;
+	color: #b4d455;
+	padding: 5px;
+}
+
+/* custom logo sizing */
+#logo {
+  width: 150px;
+  height: auto;
+}
+
+/* general image responsive sizing */
+img {
+  width: 100%;
+}
+
+/* Links */
+a {
+  color: #ff7f50;
+  text-decoration: none; /* No underlining */
+}
+a:hover,
+a:focus {
+  color: #cc6540;
+  text-decoration: underline;
+}
+
+a:visited { /* visited link */
+  /* color: #ff7f50; */
+  /* We suggest using a different color here */
+  color: gray;
+}
+a:active { /* selected link */
+  color: #994c30;
+}
+
+/* general buttons */
+.button {
+  display: inline-block;
+  background-color: #7051ef;
+  color: #ffffff;
+  font-weight: 400;
+  padding: 10px;
+  border-radius: 3px;
+  border-bottom: 2px solid #994c30;
+  transition: 0.2s opacity;
+}
+
+.button:hover {
+  opacity: 0.8; /* Reduces the opacity of the button to 80% */
+  text-decoration: none;
+}
+
+.button.contact {
+  background-color: transparent;
+  color: #ff7f50;
+  text-transform: uppercase;
+  border: 2px solid #ff7f50;
+}
+
+.button.contact:hover {
+  background-color: #ff7f50;
+  color: #ffffff;
+}
+.button.resume {
+  background-color: transparent;
+  color: #7051ef;
+  text-transform: uppercase;
+  border: 2px solid #ff7f50;
+}
+
+.button.resume:hover {
+  background-color: #7051ef;
+  color: #ffffff;
+}
