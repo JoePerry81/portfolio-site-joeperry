@@ -3,18 +3,26 @@ Colors used:
 Primary Color (Purple): #7051ef;
 Secondary Color (Dark Purple): #3a395e;
 */
+* {
+  box-sizing: border-box;
+}
+
 body {
-  background-color: ffffff;
-  font-family: 'Rubik', sans-serif;
-  font-size: 16px; /* Sets the font size to 16px */
-  font-weight: 300; /* Sets the font weight to 300 */
-  line-height: 1.6; /* Sets the line-height to 1.6 * the font-size */
+  background-color: #ffffff;
+  font-family: 'Plus Jakarta Display', sans-serif;
+  font-size: 16px;/* Sets the font size to 16px */
+  font-weight: 300;/* Sets the font weight to 300 */
+  line-height: 1.6;/* Sets the line-height to 1.6 * the font-size */
   color: #3a395e;
 }
 
-h1, h2, h3, h4 {
-  line-height: 1.4;
+h1,
+h2,
+h3,
+h4 {
+	line-height: 1.4;
 }
+
 h1 {
   font-size: 2.75em;
   font-weight: 700;
@@ -29,20 +37,21 @@ h3 {
   font-size: 1.75em;
   font-weight: 400;
 }
+
 h4 {
   font-size: 1.35em;
   font-weight: 400;
 }
 
 code {
-	background-color: black;
-	color: #b4d455;
-	padding: 5px;
+  background-color: black;
+  color: #b4d455;
+  padding: 5px;
 }
 
 /* custom logo sizing */
 #logo {
-  width: 150px;
+  width: 250px;
   height: auto;
 }
 
@@ -50,63 +59,168 @@ code {
 img {
   width: 100%;
 }
-
 /* Links */
 a {
-  color: #ff7f50;
-  text-decoration: none; /* No underlining */
+	text-decoration: none; /* No underlining */
 }
-a:hover,
-a:focus {
-  color: #cc6540;
-  text-decoration: underline;
+.navigation {
+  display: inline-block;
+  width: 100%;
+}
+.navLinks {
+  padding: 5px;
 }
 
-a:visited { /* visited link */
-  /* color: #ff7f50; */
-  /* We suggest using a different color here */
-  color: gray;
+.navLinks:hover,
+.navLinks:focus {
+	text-decoration: underline;
+	color: black;
+	background-color: pink;
+	border: 2px solid black;
 }
-a:active { /* selected link */
-  color: #994c30;
+
+.navLinks:visited {
+	/* visited link */
+	/* color: #ff7f50; */
+	/* We suggest using a different color here */
+	/* color: gray; */
+}
+.navLinks:active {
+	/* selected link */
+	color: #994c30;
 }
 
 /* general buttons */
 .button {
-  display: inline-block;
-  background-color: #7051ef;
-  color: #ffffff;
-  font-weight: 400;
-  padding: 10px;
-  border-radius: 3px;
-  border-bottom: 2px solid #994c30;
-  transition: 0.2s opacity;
+	display: inline-block;
+	background-color: #7051ef;
+	color: #ffffff;
+	font-weight: 400;
+	padding: 10px;
+	border-radius: 3px;
+	border-bottom: 2px solid #994c30;
+	transition: 0.2s opacity;
 }
 
 .button:hover {
-  opacity: 0.8; /* Reduces the opacity of the button to 80% */
-  text-decoration: none;
+	opacity: 0.8; /* Reduces the opacity of the button to 80% */
+	text-decoration: none;
 }
 
-.button.contact {
-  background-color: transparent;
-  color: #ff7f50;
+.btnContact {
+	background-color: transparent;
+	color: #ff7f50;
+	text-transform: uppercase;
+	border: 2px solid #ff7f50;
+}
+
+.btnContact:hover {
+	background-color: #ff7f50;
+	color: #ffffff;
+}
+
+.btnResume {
+	background-color: transparent;
+	color: #7051ef;
+	text-transform: uppercase;
+	border: 2px solid #ff7f50;
+}
+
+.btnResume:hover {
+	background-color: #7051ef;
+	color: #ffffff;
+}
+
+.social-icons {
+	text-align: center;
+}
+
+.social-icons svg {
+	width: 50px;
+	height: auto;
+}
+
+/* Layout styling */
+.container {
+  max-width: 1200px;
+  padding: 0 15px;
+}
+
+.row {
+  margin: 25px 0;
+  /* 25px top and bottom, 0 left and right */
+}
+#about {
+  padding-bottom: 25px;
+  border-bottom: 1px solid #4a4a4a;
+  display: inline-block;
+  width: 100%;
+}
+#project {
+  padding-bottom: 25px;
+  border-bottom: 1px solid #4a4a4a;
+  display: inline-block;
+  width: 100%;
+}
+}
+#process {
+  padding-bottom: 25px;
+  border-bottom: 1px solid #4a4a4a;
+  display: inline-block;
+  width: 100%;
+}
+#work .row {
+  padding-bottom: 25px;
+  border-bottom: 1px solid #4a4a4a;
+  display: inline-block;
+  width: 100%;
+}
+#hero {
+  background-color: #ffe4c4;
+  padding: 20px 0;
+  display: inline-block;
+  width: 100%;
+}
+#hero h1 {
+  text-align: center;
+  /* Centers text */
+  margin: 0;
+  padding: 0.67em 0;
+}
+
+header {
+  position: fixed;
+  width: 100%;
+  box-shadow: 0px 3px 6px 0px rgba(50, 50, 50, 0.75);
+  background-color: #ffe4c4;
+  text-align: center;
+  padding: 10px 0;
+}
+
+nav {
+  list-style-type: inline-block;
+  width: 100%;
+}
+
+nav>ul {
+  display: inline-block;
+  padding: 0;
+}
+
+nav>ul>li {
+  display: inline-block;
+}
+
+nav>ul>li>a {
+  padding: 0 15px;
   text-transform: uppercase;
-  border: 2px solid #ff7f50;
+  font-weight: 700;
+  color: #4a4a4a;
 }
 
-.button.contact:hover {
-  background-color: #ff7f50;
-  color: #ffffff;
+nav>ul>li>a:visited {
+  color: gray;
 }
-.button.resume {
-  background-color: transparent;
-  color: #7051ef;
-  text-transform: uppercase;
-  border: 2px solid #ff7f50;
-}
-
-.button.resume:hover {
-  background-color: #7051ef;
-  color: #ffffff;
+main {
+  padding-top: 133px;
 }
