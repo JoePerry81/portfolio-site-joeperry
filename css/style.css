@@ -162,6 +162,17 @@ a {
   display: table;
 }
 
+.vector-animation {
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+}
+
+.imgWrapper {
+  width: 390px;
+  margin:auto;
+  }
+
 #about {
   padding-bottom: 25px;
   border-bottom: 1px solid #4a4a4a;
@@ -189,6 +200,13 @@ a {
   display: inline-block;
   width: 100%;
 }
+
+#work svg {
+  width: 100%;
+  height: auto;
+}
+
+
 
 #hero {
   background-color: #ffe4c4;
