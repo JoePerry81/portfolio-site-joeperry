@@ -271,6 +271,16 @@ main {
 }
 
 /* ==============================
+small devices (0px or larger)
+================================= */
+@media only screen and (min-width: 0px) {
+
+  .col-sm-12 {
+      width: 100%;
+    }
+}
+
+/* ==============================
 Medium devices (640px and larger)
 ================================= */
 @media only screen and (min-width: 640px) {
