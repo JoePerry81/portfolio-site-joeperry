@@ -54,7 +54,7 @@ code {
 
 /* custom logo sizing */
 #logo {
-  width: 250px;
+  max-width: 150px;
   height: auto;
 }
 
@@ -170,8 +170,38 @@ a {
 
 .imgWrapper {
   width: 390px;
-  margin:auto;
-  }
+  margin: auto;
+}
+
+.navtoggle.responsive nav {
+  padding: 24px 0 0;
+}
+
+.navtoggle li:not(:last-child) {
+  display: none;
+}
+
+.navtoggle.responsive li:last-child  {
+  padding: 0 0 10px;
+}
+
+.navtoggle, .navtoggle.responsive {
+  position: relative;
+}
+
+.navtoggle li .icon {
+  position: absolute;
+  right: 0;
+  padding-right: 0;
+  top: 2px;
+  font-size: 20px;
+}
+
+.navtoggle.responsive li {
+  display: block;
+  padding: 10px 0;
+  border-top: 1px solid rgba(255,127,80,0.5);
+}
 
 #about {
   padding-bottom: 25px;
@@ -206,8 +236,6 @@ a {
   height: auto;
 }
 
-
-
 #hero {
   background-color: #ffe4c4;
   padding: 20px 0;
@@ -232,22 +260,13 @@ header {
   width: 100%;
   box-shadow: 0px 3px 6px 0px rgba(50, 50, 50, 0.75);
   background-color: #ffe4c4;
-  text-align: center;
-  padding: 10px 0;
-}
-
-nav {
-  list-style-type: inline-block;
-  width: 100%;
+  padding: 10px 0 4px;
 }
 
 nav>ul {
   display: inline-block;
   padding: 0;
-}
-
-nav>ul>li {
-  display: inline-block;
+  margin: 0;
 }
 
 nav>ul>li>a {
@@ -262,7 +281,7 @@ nav>ul>li>a:visited {
 }
 
 main {
-  padding-top: 133px;
+  padding-top: 56px;
 }
 
 [class*="col-"] {
@@ -270,14 +289,8 @@ main {
   padding: 10px;
 }
 
-/* ==============================
-small devices (0px or larger)
-================================= */
-@media only screen and (min-width: 0px) {
-
-  .col-sm-12 {
-      width: 100%;
-    }
+.col-sm-12 {
+  width: 100%;
 }
 
 /* ==============================
@@ -295,6 +308,14 @@ Medium devices (640px and larger)
     margin-top: 4px;
   }
 
+  nav>ul {
+    margin: 1em 0;
+  }
+
+  nav>ul>li {
+    display: inline-block;
+  }
+
   main {
     padding-top: 98px;
   }
@@ -307,9 +328,23 @@ Medium devices (640px and larger)
     width: 50%;
   }
 
+  .navtoggle li:not(:last-child) {
+    display: inline-block;
+  }
+
+  .navtoggle li:last-child {
+    display: none;
+  }
+
+  #logo {
+    min-width: 250px;
+    height: auto;
+  }
+
   #about-page h3 {
     margin-top: 0;
   }
+
   #about-page h4 {
     margin-top: 20px;
   }
@@ -328,12 +363,10 @@ Large devices (1024px or larger)
   }
 
   .container {
-  max-width: 1200px;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+  }
 }
 
 /* ==============================
@@ -341,18 +374,32 @@ X-large devices (1440px or larger)
 ================================= */
 @media only screen and (min-width: 1440px) {}
 
-  @keyframes color-change {
-  0% {fill: #edc655;}
-  50% {fill: #fcffad;}
-  100% {fill: #f76414;}
+@keyframes color-change {
+  0% {
+    fill: #edc655;
+  }
+
+  50% {
+    fill: #fcffad;
+  }
+
+  100% {
+    fill: #f76414;
+  }
 }
+
 .sun {
   animation: 4s color-change infinite alternate linear;
 }
 
 @keyframes cloud-move {
-  from {transform: translate(0,50px);}
-  to {transform: translate(200px,50px);}
+  from {
+    transform: translate(0, 50px);
+  }
+
+  to {
+    transform: translate(200px, 50px);
+  }
 }
 
 .cloud-front {
@@ -364,8 +411,13 @@ X-large devices (1440px or larger)
 }
 
 @keyframes cloud-move-reverse {
-  from {transform: translate(446px,48px);}
-  to {transform: translate(100px, 48px);}
+  from {
+    transform: translate(446px, 48px);
+  }
+
+  to {
+    transform: translate(100px, 48px);
+  }
 }
 
 .cloud-back {
