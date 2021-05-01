@@ -12,7 +12,8 @@
   <!-- Plus Jakarta Display Font -->
   <link rel="preconnect" href="https://fonts.gstatic.com">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@xz/fonts@1/serve/plus-jakarta-display.min.css">
-  <!-- we will continue to use our style.css file for styling -->
+  <script src="https://kit.fontawesome.com/01b7c8dea1.js" crossorigin="anonymous">
+  </script>
   <link rel="stylesheet" type="text/css" href="css/style.css">
   <title> About Joe Perry UI/UX Designer Boston</title>
 </head>
@@ -21,15 +22,21 @@
   <!-- For the header -->
   <header>
     <div class="container">
-      <link href="assets/imgs/favicon.ico" rel="shortcut icon">
-      <img src="assets/imgs/logo.svg" id="logo" alt="Joe Perry Design">
-      <nav class="navigation">
-        <ul>
-          <li><a class="navLinks" href="index.html">Work</a></li>
-          <li><a class="navLinks" href="about.html">About</a></li>
-          <li><a class="navLinks" href="#contact">Contact</a></li>
-        </ul>
-      </nav>
+      <div class="navtoggle" id="myNavtoggle">
+        <link href="assets/imgs/favicon.ico" rel="shortcut icon">
+        <img src="assets/imgs/logo.svg" class="logo" alt="Joe Perry Design">
+        <nav class="navigation">
+          <ul>
+            <li><a class="navLinks" href="index.html">Work</a></li>
+            <li><a class="navLinks" href="about.html">About</a></li>
+            <li><a class="navLinks" href="#contact" onclick="menuToggle()">Contact</a></li>
+            <li><a href="javascript:void(0);" class="icon" onclick="menuToggle()">
+                <i class="fas fa-bars"></i>
+              </a>
+            </li>
+          </ul>
+        </nav>
+      </div>
     </div>
   </header>
 
@@ -177,6 +184,10 @@
       </div>
     </div>
   </footer>
+  <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous">
+  </script>
+  <script src="js/scripts.js">
+  </script>
 </body>
 
 </html>

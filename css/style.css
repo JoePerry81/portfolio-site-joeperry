@@ -52,12 +52,6 @@ code {
   padding: 5px;
 }
 
-/* custom logo sizing */
-#logo {
-  max-width: 150px;
-  height: auto;
-}
-
 /* general image responsive sizing */
 img {
   width: 100%;
@@ -67,6 +61,49 @@ img {
 a {
   text-decoration: none;
   /* No underlining */
+}
+
+header {
+  box-shadow: 0px 3px 6px 0px rgba(50, 50, 50, 0.75);
+  background-color: #ffe4c4;
+  text-align: center;
+  padding: 10px 0;
+}
+
+/* custom logo sizing */
+.logo {
+  max-width: 150px;
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 2.5em;
+}
+
+nav {
+  display: inline-block;
+  width: 100%;
+}
+
+nav > ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+nav > ul > li {
+  display: inline-block;
+  list-style-type: none;
+  padding: 0;
+}
+
+nav > ul > li > a {
+  display: inline-block;
+  padding: 0 15px;
+  color: #000000;
+  text-transform: uppercase;
+  text-decoration: none;
+}
+
+main {
+  padding-top: 0px;
 }
 
 .navLinks {
@@ -173,22 +210,15 @@ a {
   margin: auto;
 }
 
-.navtoggle.responsive nav {
-  padding: 24px 0 0;
-}
-
 .navtoggle li:not(:last-child) {
   display: none;
-}
-
-.navtoggle.responsive li:last-child  {
-  padding: 0 0 10px;
 }
 
 .navtoggle, .navtoggle.responsive {
   position: relative;
 }
 
+/* our hamburger menu */
 .navtoggle li .icon {
   position: absolute;
   right: 0;
@@ -197,10 +227,18 @@ a {
   font-size: 20px;
 }
 
+.navtoggle.responsive nav {
+  padding: 24px 0 0;
+}
+
 .navtoggle.responsive li {
   display: block;
   padding: 10px 0;
   border-top: 1px solid rgba(255,127,80,0.5);
+}
+
+.navtoggle.responsive li:last-child  {
+  padding: 0 0 10px;
 }
 
 #about {
@@ -255,35 +293,6 @@ a {
   display: block;
 }
 
-header {
-  position: fixed;
-  width: 100%;
-  box-shadow: 0px 3px 6px 0px rgba(50, 50, 50, 0.75);
-  background-color: #ffe4c4;
-  padding: 10px 0 4px;
-}
-
-nav>ul {
-  display: inline-block;
-  padding: 0;
-  margin: 0;
-}
-
-nav>ul>li>a {
-  padding: 0 15px;
-  text-transform: uppercase;
-  font-weight: 700;
-  color: #4a4a4a;
-}
-
-nav>ul>li>a:visited {
-  color: gray;
-}
-
-main {
-  padding-top: 56px;
-}
-
 [class*="col-"] {
   float: left;
   padding: 10px;
@@ -302,6 +311,11 @@ Medium devices (640px and larger)
     padding: 20px 0 13px;
   }
 
+  .logo {
+    min-width: 250px;
+    height: auto;
+  }
+
   nav {
     width: auto;
     float: right;
@@ -314,6 +328,7 @@ Medium devices (640px and larger)
 
   nav>ul>li {
     display: inline-block;
+    position: relative;
   }
 
   main {
@@ -334,11 +349,6 @@ Medium devices (640px and larger)
 
   .navtoggle li:last-child {
     display: none;
-  }
-
-  #logo {
-    min-width: 250px;
-    height: auto;
   }
 
   #about-page h3 {
