@@ -1,7 +1,7 @@
 /*
 Colors used:
 Primary Color (Purple): #7051ef;
-Secondary Color (Dark Purple): #3a395e;
+Secondary Color (Dark Purple): #3a395e; 
 */
 * {
   box-sizing: border-box;
@@ -26,6 +26,7 @@ h4 {
   line-height: 1.4;
 }
 
+
 h1 {
   font-size: 2.75em;
   font-weight: 700;
@@ -34,11 +35,13 @@ h1 {
 h2 {
   font-size: 2.25em;
   font-weight: 700;
+  text-align: center;
 }
 
 h3 {
   font-size: 1.75em;
-  font-weight: 400;
+  font-weight: 700;
+  margin: 0px;
 }
 
 h4 {
@@ -55,11 +58,11 @@ code {
 /* general image responsive sizing */
 img {
   width: 100%;
+  border-radius: 10px;
 }
 
 /* Links */
 a {
-  text-decoration: none;
   /* No underlining */
 }
 
@@ -67,7 +70,16 @@ header {
   position: fixed;
   width: 100%;
   box-shadow: 0px 3px 6px 0px rgba(50, 50, 50, 0.75);
-  background-color: #ffe4c4;
+  background-color: #7051ef;
+  text-align: center;
+  padding: 10px 0;
+}
+
+footer {
+  width: 100%;
+  box-shadow: 0px 3px 6px 0px rgba(50, 50, 50, 0.75);
+  background-color: #7051ef;
+  color: #FFFFFF;
   text-align: center;
   padding: 10px 0;
 }
@@ -85,21 +97,21 @@ nav {
   width: 100%;
 }
 
-nav > ul {
+nav>ul {
   list-style-type: none;
   padding: 0;
 }
 
-nav > ul > li {
+nav>ul>li {
   display: inline-block;
   list-style-type: none;
   padding: 0;
 }
 
-nav > ul > li > a {
+nav>ul>li>a {
   display: inline-block;
   padding: 0 15px;
-  color: #000000;
+  color: #ffffff;
   text-transform: uppercase;
   text-decoration: none;
 }
@@ -114,13 +126,13 @@ main {
 
 .navLinks:hover,
 .navLinks:focus {
-  text-decoration: underline;
-  color: black;
-  background-color: pink;
-  border: 2px solid black;
+  color: #7051ef;
+  background-color: #ffffff;
+  border-radius: 10px;
 }
 
 .navLinks:visited {
+    text-decoration: underline;
   /* visited link */
   /* color: #ff7f50; */
   /* We suggest using a different color here */
@@ -129,41 +141,26 @@ main {
 
 .navLinks:active {
   /* selected link */
-  color: #994c30;
+  color: #7051ef;
+  font-weight: 700;
 }
 
 /* general buttons */
-.button {
-  display: inline-block;
-  background-color: #7051ef;
-  color: #ffffff;
-  font-weight: 400;
-  text-decoration: none;
-  padding: 10px;
-  border-radius: 3px;
-  border-bottom: 2px solid #994c30;
-  transition: 0.4s opacity, 0.5s background-color, 0.4s font-size;
-}
-
-.button:hover {
-  opacity: 0.8;
-  /* Reduces the opacity of the button to 80% */
-  text-decoration: none;
-}
 
 .btnContact {
   background-color: transparent;
-  color: #ff7f50;
+  color: #ffffff;
   text-transform: uppercase;
-  border: 2px solid #ff7f50;
+  border: 2px solid #ffffff;
   padding: 10px;
-  border-radius: 3px;
+  border-radius: 10px;
   transition: 0.4s opacity, 0.5s background-color, 0.4s font-size;
+  text-decoration: none;
 }
 
 .btnContact:hover {
-  background-color: #ff7f50;
-  color: #ffffff;
+  background-color: #ffffff;
+  color: #7051ef;
 }
 
 .btnResume {
@@ -183,11 +180,43 @@ main {
 
 .social-icons {
   text-align: center;
+  display: inline-block;
+  list-style-type: none;
+  padding: 0;
 }
 
 .social-icons svg {
   width: 50px;
   height: auto;
+}
+
+.footer-links {
+  color: #ffffff;
+  font-weight: 700;
+}
+
+.footer-links:hover {
+  color: #ffffff;
+  font-weight: 700;
+  font-style: italic;
+}
+
+.button {
+  display: inline-block;
+  background-color: #7051ef;
+  color: #ffffff;
+  font-weight: 400;
+  text-decoration: none;
+  padding: 10px;
+  border-radius: 10px;
+  box-shadow: 0px 3px 6px 0px rgba(50, 50, 50, 0.75);
+  transition: 0.4s opacity, 0.5s background-color, 0.4s font-size;
+}
+
+.button:hover {
+  opacity: 0.8;
+  /* Reduces the opacity of the button to 80% */
+  text-decoration: none;
 }
 
 /* Layout styling */
@@ -236,10 +265,10 @@ main {
 .navtoggle.responsive li {
   display: block;
   padding: 10px 0;
-  border-top: 1px solid rgba(255,127,80,0.5);
+  border-top: 1px solid rgba(255, 127, 80, 0.5);
 }
 
-.navtoggle.responsive li:last-child  {
+.navtoggle.responsive li:last-child {
   padding: 0 0 10px;
 }
 
@@ -252,7 +281,7 @@ main {
 
 #project {
   padding-bottom: 25px;
-  border-bottom: 1px solid #4a4a4a;
+  border-bottom: 0px solid #4a4a4a;
   display: inline-block;
   width: 100%;
 }
@@ -266,7 +295,7 @@ main {
 
 #work .row {
   padding-bottom: 25px;
-  border-bottom: 1px solid #4a4a4a;
+  border-bottom: 0px solid #4a4a4a;
   display: inline-block;
   width: 100%;
 }
@@ -277,7 +306,7 @@ main {
 }
 
 #hero {
-  background-color: #ffe4c4;
+  background-color: #ffffff;
   padding: 20px 0;
   display: inline-block;
   width: 100%;
